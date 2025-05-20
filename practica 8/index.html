@@ -83,6 +83,8 @@
                         <a class="badge bg-primary text-decoration-none link-light" >Electrónica</a>
                         <a class="badge bg-primary text-decoration-none link-light" >Robótica</a>
                         <a class="badge bg-primary text-decoration-none link-light" >Bluetooth</a>
+                        <a class="badge bg-primary text-decoration-none link-light" >CNC</a>
+                        <a class="badge bg-primary text-decoration-none link-light" >Mecánica</a>
 
                     </header>
                 </div>
@@ -92,35 +94,43 @@
             <section>
                 <div class="container px-5">
 
-                    <figure class="mb-4"><img class="img-fluid rounded" width="800px" src="img/web.jpg" alt="..." /></figure>
+                    <figure class="mb-4"><img class="img-fluid rounded" width="800px" src="img/Image (5).jpeg" alt="..." /></figure>
                                 
                     <p id="resumen">
                         <h2 class="fw-bolder mb-4 mt-5 fs-5" >- Resumen -</h2>
-                        <p class="fs-6 mb-4"> Esta práctica se enfocó en la implementación de un sistema de control mediante Bluetooth para el brazo robótico desarrollado en la práctica 4. Utilizando la plataforma MIT App Inventor, se diseñó y desarrolló una aplicación móvil que permite controlar las posiciones de los servomotores mediante diales. Esta interfaz facilita el ajuste preciso de las articulaciones del brazo de forma remota, mejorando la experiencia de usuario y expandiendo las capacidades del sistema robótico.
+                        <p class="fs-6 mb-4"> Esta práctica se enfocó en la implementación de una máquina CNC diseñada para realizar dibujos de forma automatizada. El sistema fue controlado mediante comunicación Bluetooth, lo que permitió enviar comandos desde una computadora al microcontrolador. A través de este control, se gestionó con precisión el movimiento de los motores paso a paso, permitiendo la creación de trazos sobre una superficie de dibujo y demostrando la capacidad del sistema para ejecutar patrones predefinidos de manera eficiente.
 
                         <p id="intro">
                         <h2 class="fw-bolder mb-4 mt-5 fs-5" >- Introducción -</h2>
-                        <p class="fs-6 mb-4"> Siguiendo los conocimientos adquiridos en la práctica 6, reemplazamos el sistema de control basado en potenciómetros por una aplicación móvil y el módulo Bluetooth HC05. La interfaz de la aplicación está compuesta por cuatro diales, cada uno asignado a un servomotor específico. Al ajustar cualquiera de los diales, se envía un valor que identifica el servomotor cuya posición se debe modificar, seguido de un valor entre 0 y 180 que indica la posición deseada para ese servo.
-                        <p class="fs-6 mb-4"> Una vez que los datos son recibidos por el módulo HC05, el Arduino procesa la información y ajusta los servomotores a las posiciones solicitadas por la aplicación, logrando así un control preciso y remoto de los movimientos del brazo robótico.    
+                        <p class="fs-6 mb-4"> En esta práctica se diseñó y fabricó una máquina CNC con el objetivo de realizar dibujos automatizados sobre una superficie plana. El sistema fue controlado mediante comunicación Bluetooth, lo que permitió enviar instrucciones desde una computadora hacia el microcontrolador encargado del movimiento de los motores paso a paso. Esta implementación demuestra cómo es posible replicar patrones predefinidos con exactitud, destacando el potencial de la automatización en aplicaciones gráficas. 
+                        <p class="fs-6 mb-4"> Además, la experiencia permitió reforzar conocimientos sobre control de motores, diseño mecánico y programación de sistemas embebidos.
 
+                        
                         <p id="materiales">
                         <h2 class="fw-bolder mb-4 mt-5 fs-5" >- Materiales -</h2>
                         <p class="fs-6 mb-4"> Placa Arduino UNO.
-                        <p class="fs-6 mb-4"> Módulo Bluetooth HC05.
-                        <p class="fs-6 mb-4"> Cable USB para la conexión con el ordenador.
-                        <p class="fs-6 mb-4"> Servomotores (5 unidades).
-                        <p class="fs-6 mb-4"> Jumpers.
+                        <p class="fs-6 mb-4"> Motores a paso 17 nema.
+                        <p class="fs-6 mb-4"> 2 Cables para motores a paso.
+                        <p class="fs-6 mb-4"> Controlador.
+                        <p class="fs-6 mb-4"> 2 Drivers.
+                        <p class="fs-6 mb-4"> Correa dentada. 
+                        <p class="fs-6 mb-4"> Polea dentada.
+                        <p class="fs-6 mb-4"> Piezas de impresión 3D.
+                        <p class="fs-6 mb-4"> MDF.   
                         <p class="fs-6 mb-4"> Fuente de alimentación externa.
 
                         <p id="desarrollo">
                         <h2 class="fw-bolder mb-4 mt-5 fs-5">- Desarrollo -</h2>
-                        <p class="fs-6 mb-4"> La aplicación y el código de Arduino fueron desarrollados de manera simultánea para asegurar que los datos enviados desde el celular fueran procesados correctamente. Esta sincronización nos permitió ajustar ambos sistemas y garantizar su correcta interacción.
-                           <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="600px" src="img/app brazo bth.png" alt="..." /></figure>
-                    
+                        <p class="fs-6 mb-4"> El proceso comenzó con el diseño mecánico de la máquina CNC, tomando en cuenta las dimensiones necesarias para el área de trabajo y la disposición de los ejes de movimiento. Una vez finalizado el diseño, se procedió al corte de piezas estructurales en MDF, que conforman la base y el soporte de los componentes. Paralelamente, se imprimieron en 3D diversas piezas funcionales, como soportes para motores, acoples y guías para los ejes, optimizadas para su integración con los elementos mecánicos.
+                        <p class="fs-6 mb-4"> Posteriormente, se realizó el ensamble de los ejes de movimiento, integrando motores paso a paso, poleas y correas de distribución para garantizar un desplazamiento preciso y sincronizado en los planos X e Y. Se cuidó la alineación y fijación de cada componente para asegurar el correcto funcionamiento del sistema.
+                        <p class="fs-6 mb-4"> Una vez ensamblada la parte mecánica, se procedió al cableado de los motores, conectándolos a una placa Arduino, la cual estaba equipada con una shield que permitía la conexión de dos drivers para el control de los motores paso a paso. Finalmente, se estableció la comunicación entre la computadora y la placa Arduino mediante conexión por puerto serial. Desde la computadora, se ejecutó el programa que contenía las instrucciones de movimiento, permitiendo controlar de forma remota el trazo de dibujos mediante comandos precisos enviados al sistema.        
+        
 
                             <p id="Diseño">
                             <h1 class="fw-bolder2 mb-4 mt-5 fs-5">Diseño/h1>
-                            <p class="fs-6 mb-4"> El diseño de la interfaz de la aplicación es sencillo, compuesto únicamente por tres botones y cinco diales. Los botones cumplen funciones específicas: conexión, desconexión y salida de la aplicación. Por otro lado, los diales están destinados a controlar el movimiento del brazo robótico, permitiendo ajustar la posición de cada servomotor de manera precisa y directa.
+                            <p class="fs-6 mb-4"> Para la base y el marco se utilizó MDF cortado a medida, lo cual proporcionó estabilidad y facilidad de montaje.
+                            <p class="fs-6 mb-4"> Se integraron también piezas impresas en 3D, diseñadas específicamente para alojar componentes clave del sistema, como los soportes para los motores paso a paso, las guías de deslizamiento y el mecanismo de sujeción del plumón. Estas piezas permitieron una unión precisa entre elementos y facilitaron el ensamble modular del equipo.
+                            <p class="fs-6 mb-4"> El sistema de movimiento está compuesto por dos ejes (X y Y), cada uno accionado por motores paso a paso conectados a poleas y correas de distribución, lo que garantiza un desplazamiento suave y coordinado. El eje Z, que sostiene el plumón, también está conformado por piezas impresas que permiten su ascenso y descenso, ajustando el contacto con la superficie de dibujo según sea necesario.    
                             <figure class="mb-4" align="center"><img class="img-fluid rounded"  width="600px" src="img/Captura de pantalla 2025-04-04 115015.png" alt="..." /></figure>
                     
                             
